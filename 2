@@ -1,0 +1,46 @@
+
+
+
+/*
+ Write a C# Sharp program to get the absolute difference between n and 51. If n is broader than 51 return triple the absolute difference.
+Sample Input:
+53
+30
+51
+Expected Output:
+6
+21
+0
+ */
+namespace SIVA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            do
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                int a = 51;
+                if (n>a)
+                {
+                    Console.WriteLine(sum(n-a));
+                }
+                else
+                {
+                   
+                    Console.WriteLine(a-n);
+                  
+                }
+            }
+      while(true);
+
+
+        }
+   
+        static int sum(int a)
+        {
+            return a*3;
+        }
+    }
+}

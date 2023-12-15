@@ -1,0 +1,53 @@
+
+
+
+/*
+Write a C# Sharp program to check two given integers, and return true if one of them is 30 or if their sum is 30.
+
+Sample Input:
+30, 0
+25, 5
+20, 30
+20, 25
+Expected Output:
+True
+True
+True
+False
+ */
+namespace SIVA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            do
+            {
+                int a = Convert.ToInt32(Console.ReadLine());
+                int b = Convert.ToInt32(Console.ReadLine());
+                if (a == 30 || b == 30)
+                {
+                    Console.WriteLine(pass(a));
+                }
+                else if ((a + b) == 30)
+                {
+                    Console.WriteLine(pass(a));
+                }
+                else { Console.WriteLine(pass(a, b)); }
+            }
+            while (true);
+
+
+        }
+   
+        static bool pass(int a)
+        {
+            return true;
+        }
+        static bool pass(int a, int b)
+        {
+            return false;
+        }
+
+    }
+}

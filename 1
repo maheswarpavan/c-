@@ -1,0 +1,46 @@
+
+
+
+/*Write a C# Sharp program to compute the sum of the two numerical values. If the two values are the same, return triple their sum.
+
+Sample Input:
+1, 2
+3, 2
+2, 2
+Expected Output:
+3
+5
+12   */
+namespace SIVA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            do
+            {
+                int a = Convert.ToInt32(Console.ReadLine());
+                int b = Convert.ToInt32(Console.ReadLine());
+                if (a != b)
+                {
+                    Console.WriteLine(sum(a, b));
+                }
+                else
+                {
+                    Console.WriteLine(sum(a));
+                }
+            }
+      while(true);
+
+
+        }
+     static int  sum(int a ,int b)
+        {
+            return a + b;
+        }
+        static int sum(int a)
+        {
+            return a*3;
+        }
+    }
+}

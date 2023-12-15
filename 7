@@ -1,0 +1,43 @@
+
+
+
+/*
+ Write a C# Sharp program to create a string with the last char added at the front and back of a given string of length 1 or more.
+
+Sample Input:
+"Red"
+"Green"
+"1"
+Expected Output:
+dRedd
+nGreenn
+111
+*/
+namespace SIVA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            do
+            {
+                string a = Console.ReadLine();
+               // if (a.Length <= 1)
+                //    Console.WriteLine(a);
+              // else
+                    Console.WriteLine(program(a));
+            }
+            while(true);
+
+        }
+
+            static string program(string a)
+            {
+            return ((a[a.Length-1]+a+ a[a.Length - 1]));
+        } 
+        }
+   
+        
+
+    
+}

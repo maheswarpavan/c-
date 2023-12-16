@@ -1,0 +1,54 @@
+
+
+
+/*
+Write a C# Sharp program to check whether the sequence of numbers 1, 2, 3 appears in a given array of integers somewhere.
+
+Sample Input:
+{1,1,2,3,1}
+{1,1,2,4,1}
+{1,1,2,1,2,3}
+Expected Output:
+True
+False
+True
+*/
+namespace SIVA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            do
+            {
+                Console.WriteLine("SIZE OF ARRAY: ");
+                int n = Convert.ToInt32(Console.ReadLine());
+                int[] a = new int[n];
+                Console.WriteLine("ENTER "+ n +" ELEMENTS TO ARRAY: " );
+                for (int i = 0; i < n; i++) a[i] = Convert.ToInt32(Console.ReadLine());
+               // Console.WriteLine("ENTER NUMBER YOU WANTS TO CHECK: ");
+               // int sam = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("ANSWER IS "+program(a,n));
+            }
+            while (true);
+
+        }
+
+        static bool program(int[] a, int n)
+        {
+           for(int i = 0;i<=n-2;i++)
+            {
+                if ((a[i] == 1) && (a[i+1] == 2)&& (a[i + 2] == 3))
+                {
+                    return true;
+                }
+            }
+           return false;
+
+        }
+
+
+    }
+
+    
+}

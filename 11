@@ -1,0 +1,49 @@
+
+
+
+/*
+ Write a C# Sharp program to create a list from a given list of integers, removing all values ending in 7.
+
+Sample Input:
+{ 10, 22, 35 , 47, 53, 67 }
+Expected Output :
+10 22 35 53
+*/
+namespace SIVA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            do
+            {
+                Console.WriteLine("SIZE OF ARRAY: ");
+                int n = Convert.ToInt32(Console.ReadLine());
+                int[] a = new int[n];
+                Console.WriteLine("ENTER " + n + " ELEMENTS TO ARRAY: ");
+                for (int i = 0; i < n; i++) a[i] = Convert.ToInt32(Console.ReadLine());
+                // Console.WriteLine("ENTER NUMBER YOU WANTS TO CHECK: ");
+                // int sam = Convert.ToInt32(Console.ReadLine());
+                program(a);
+            }
+            while (true);
+
+        }
+
+        static void program(int[] a)
+        {
+            foreach(int i in a)
+            {
+                if(i%10!=7)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+        }
+
+
+    }
+
+
+}

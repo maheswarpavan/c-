@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace SIVA
+{
+    internal class Primary
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+
+
+                Movie m1 = new Movie("Sahoo", 500, 5);
+                Movie m2 = new Movie("veena", 200, 4);
+                Movie m3 = new Movie("jaanu", 50, 8);
+                m1.Budget = 10;
+                m3.Budget = 10000000;
+                m1.big();
+                m2.big();
+                m3.big();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+    }
+
+
+    public class Movie
+    {
+        private string name;
+        public string Name { get { return name; } set { name = value; } }
+        private int budget;
+        public int Budget
+        {
+            get { return budget; }
+
+            set
+            {
+                if (value > 500)
+                {
+                    budget = 500;
+                }
+                else
+                    budget = value;
+            }
+        }
+        private int actors;
+        public int Actors
+        {
+            get { return actors; }
+            set
+            {
+                if (value > 10)
+                {
+                    value = 10;
+                }
+                else
+                    actors = value;
+            }
+        }
+        public Movie(string nname, int bbudget, int aactors)
+        {
+            Name = nname;
+            Budget = bbudget;
+            Actors = aactors;
+        }
+
+        public void big()
+        {
+            if (Budget >= 200)
+            {
+                Console.WriteLine("high budget movie");
+            }
+
+            else
+            {
+                Console.WriteLine("less budget movie");
+            }
+
+        }
+    }
+}

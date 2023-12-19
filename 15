@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace SIVA
+{
+    internal class Primary
+    {
+        static void Main(string[] args)
+        {
+            Taxi c = new Taxi(100000);
+            c.Speed = 10000;// follows set conditions
+            Console.WriteLine(c.Speed);
+        }
+
+    }
+
+    public  class Taxi
+        {
+        private int speed;//feild
+        public int Speed// property
+        {
+
+            get
+            {
+                return speed;// read the value available with feild
+
+            }
+            set
+            {
+                if (value > 5000)
+                    speed = 500;// value = given value from main class
+                else
+                {
+                    Console.WriteLine("3: " + Speed);
+                    speed = value;
+                    Console.WriteLine("4: " + Speed);
+                }
+            }
+
+        }
+        public Taxi(int speed)
+        {
+            Speed = speed; // arguement speed will follow the conditions of property
+            Console.WriteLine("1: " + Speed);
+            Console.WriteLine("2: " + speed);
+        }
+    }
+   
+}
